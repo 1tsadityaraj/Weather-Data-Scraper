@@ -1,16 +1,35 @@
 """
 Main FastAPI application entry point
 """
+from fastapi.middleware.cors import CORSMiddleware
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes import weather
 from app.scheduler import start_scheduler
 
-app = FastAPI(
-    title="Weather Data Scraper API",
-    description="API for scraping and retrieving weather data",
-    version="1.0.0"
+app = FastAPI()
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:3003",
+        "http://localhost:5173",
+        "https://weather-data-scraper-5xom.vercel.app",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+
+   
+
+
+
 
 # Configure CORS for frontend access
 app.add_middleware(
