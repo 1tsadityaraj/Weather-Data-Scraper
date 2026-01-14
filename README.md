@@ -8,7 +8,7 @@ A full-stack weather application that scrapes real-time weather data, stores his
 
 - **Frontend (Vercel):** https://weather-data-scraper-5xom.vercel.app  
 - **Backend (Render):** https://weather-data-scraper.onrender.com  
-- **API Docs:** https://weather-data-scraper.onrender.com/docs  
+- **API Docs:** https://weather-data-scraper.onrender.com/docs
 
 ---
 
